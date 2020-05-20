@@ -6,6 +6,7 @@
 
 exports.handler = async (event) => {
   const method = event.httpMethod;
+  console.log(JSON.stringify(event));
 
   switch (method) {
     // right now, the build webhook has to be manually enabled or disabled by David Wells
