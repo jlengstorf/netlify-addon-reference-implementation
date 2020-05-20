@@ -6,9 +6,6 @@
 
 exports.handler = async (event) => {
   const method = event.httpMethod;
-  const body = JSON.parse(event.body);
-
-  console.log(JSON.parse(body));
 
   switch (method) {
     // right now, the build webhook has to be manually enabled or disabled by David Wells
@@ -38,10 +35,13 @@ exports.handler = async (event) => {
       };
 
     case 'PUT':
+      // const body = JSON.parse(event.body);
+
+      console.log(event.body);
       return {
         statusCode: 200,
         // TODO test what happens if we send back an empty response
-        body: JSON.stringify(body.config),
+        body: JSON.stringify({}),
       };
 
     case 'DELETE':
