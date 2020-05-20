@@ -22,7 +22,7 @@ exports.handler = async (event) => {
           // all other fields are optional
           message: 'This will be sent back to the user',
           // this will get proxied as `/.netlify/addon-namespace`
-          endpoint: 'https://addons-reference.netlify.app/.netlify/functions',
+          endpoint: 'https://learnwithjason.dev',
           env: {
             // env vars passed back will NOT be visible in the UI!
             // they DO work in Netlify Dev, though
