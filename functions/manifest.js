@@ -12,6 +12,7 @@ exports.handler = async () => {
         test: {
           displayName: 'A test value',
           description: 'This is a test value. It’s configurable by the user.',
+          type: 'string',
         },
       },
     }),
