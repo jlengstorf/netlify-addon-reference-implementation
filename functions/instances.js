@@ -8,6 +8,8 @@ exports.handler = async (event) => {
   const method = event.httpMethod;
   const body = JSON.parse(event.body);
 
+  console.log(JSON.parse(body));
+
   switch (method) {
     // right now, the build webhook has to be manually enabled or disabled by David Wells
     // OAuth scopes will help us solve this problem by letting the user decide what should and shouldn’t be enabled

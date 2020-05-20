@@ -8,7 +8,12 @@ exports.handler = async () => {
       // Netlify will provide a JWT
       // https://github.com/netlify/addons#add-on-authenication
       admin_url: '',
-      config: {},
+      config: {
+        test: {
+          displayName: 'A test value',
+          description: 'This is a test value. It’s configurable by the user.',
+        },
+      },
     }),
   };
 };
