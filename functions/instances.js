@@ -41,8 +41,18 @@ exports.handler = async (event) => {
       console.log(event.body);
       return {
         statusCode: 200,
-        // TODO test what happens if we send back an empty response
-        body: JSON.stringify({}),
+        // you MUST return all settings here — they’ll be removed otherwise
+        body: JSON.stringify({
+          env: {
+            // env vars passed back will NOT be visible in the UI!
+            // they DO work in Netlify Dev, though
+            // feature request exists to show this in the UI — should bump this
+            SERVICE_API_KEY: '<your user’s API key or whatever>',
+          },
+          snippets: [
+            // we can add any HTML we want here, e.g. embed a script or some styles in the site
+          ],
+        }),
       };
 
     case 'DELETE':
