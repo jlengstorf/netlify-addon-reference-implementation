@@ -9,7 +9,7 @@ exports.handler = async (event) => {
       // if you need to authenticate, add the URL here
       // Netlify will provide a JWT
       // https://github.com/netlify/addons#add-on-authenication
-      admin_url: '',
+      admin_url: 'https://learnwithjason.dev',
       config: {
         test: {
           displayName: 'A test value',
